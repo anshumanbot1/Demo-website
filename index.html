@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Logistics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <h1 id="logo">Demo Logistics</h1>
+            <form class="search-form" action="#" method="get">
+                <input type="text" placeholder="Search..." name="search" id="searchInput">
+                <button type="button" id="searchIcon">🔍</button>
+            </form>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="tab-content active">
+            <div class="hero container">
+                <div class="hero-text">
+                    <h2>Your Trusted Logistics Partner</h2>
+                    <p>Providing reliable and efficient logistics solutions tailored to your business needs.</p>
+                    <a href="#contact" class="cta-button">Get in Touch</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero.jpg" alt="Logistics">
+                </div>
+            </div>
+            <section class="company-motivation">
+                <div class="container">
+                    <h2>Why We Do What We Do</h2>
+                    <p>At Demo Logistics, we are driven by our commitment to excellence. Our goal is to simplify your logistics needs and ensure that your operations run smoothly. We believe in making a positive impact on our clients’ businesses by offering innovative solutions and exceptional service.</p>
+                </div>
+            </section>
+        </section>
+        <section id="about" class="tab-content">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>At Demo Logistics, we are dedicated to offering the highest quality logistics services. Our team of experienced professionals is committed to ensuring your supply chain operates smoothly and efficiently.</p>
+                <div class="team">
+                    <div class="team-member">
+                        <img src="images/team1.jpg" alt="Team Member">
+                        <h3>John Doe</h3>
+                        <p>CEO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team2.jpg" alt="Team Member">
+                        <h3>Jane Smith</h3>
+                        <p>COO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team3.jpg" alt="Team Member">
+                        <h3>Emily Johnson</h3>
+                        <p>Logistics Manager</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="tab-content">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services">
+                    <div class="service-card">
+                        <img src="images/service1.jpg" alt="Transportation">
+                        <h3>Transportation</h3>
+                        <p>Efficient and reliable transportation services to get your goods where they need to go.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="images/service2.jpg" alt="Warehousing">
+                        <h3>Warehousing</h3>
+                        <p>Secure and spacious warehousing solutions for all your storage needs.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="images/service3.jpg" alt="Distribution">
+                        <h3>Distribution</h3>
+                        <p>Comprehensive distribution services to streamline your supply chain.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="tab-content">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form action="mailto:info@demologistics.com" method="post" enctype="text/plain">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+                <address>
+                    <p>Email: info@demologistics.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </address>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Demo Logistics. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

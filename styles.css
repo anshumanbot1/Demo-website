@@ -10,452 +10,242 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
-    background: #e9ecef;
+    background: #f4f4f4;
 }
 
-.container {
-    width: 95%;
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Header */
 header {
     background: #004080;
-    color: #fff;
-    padding: 1rem 2rem;
+    color: white;
+    padding: 1rem 0;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.header-container {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
     align-items: center;
+    position: relative;
+    z-index: 10;
+    flex-wrap: wrap;
 }
 
 #logo {
-    font-size: 2rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    margin-left: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    margin-left: 2rem;
 }
 
-.search-form {
-    display: flex;
-    align-items: center;
-    margin-left: auto; /* Align to the right */
-    order: 1;
+#hero-text {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
 }
 
-.search-form input {
-    padding: 0.5rem;
-    border: none;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    font-size: 1rem;
-}
-
-.search-form button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    background: #0056b3;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.search-form button:hover {
-    background: #003d7a;
-}
-
-nav {
-    margin-left: auto; /* Align navigation to the right */
-}
-
-nav ul {
+header nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0;
 }
 
-nav ul li a {
-    color: #fff;
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    background: #003366;
+header .search-form {
+    margin-right: 2rem;
 }
 
-.hamburger {
-    display: none;
-    font-size: 2rem;
+header .search-form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 200px;
+}
+
+header .search-form button {
+    padding: 0.5rem;
+    background: #004080;
+    color: white;
+    border: none;
     cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background: #004080;
-        width: 100%;
-        padding: 1rem 0;
-        text-align: center;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .search-form {
-        margin-left: 0;
-    }
-}
-
-/* Main Content */
-main {
-    padding: 6rem 0 2rem; /* Top padding to accommodate fixed header */
-}
-
-.tab-content {
-    display: none;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.tab-content.active {
-    display: block;
-    width: 100%;
 }
 
 /* Hero Section */
 .hero {
+    background: url('images/hero-bg.jpg') center/cover no-repeat;
+    height: 80vh;
     display: flex;
-    align-items: center; /* Align to the top */
-    justify-content: space-between;
-    padding: 2rem;
-    background: #0056b3;
-    color: #fff;
-    border-bottom: 5px solid #003d7a;
-    border-radius: 10px;
-    margin: 2rem auto; /* Centered */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative; /* For positioning */
-    max-width: 100%;
-    text-align: center; /* Centered text */
-}
-
-.hero-text {
-    flex: 1;
-    padding: 1rem;
-    text-align: center; /* Centered text */
-}
-
-.hero-text h2 {
-    font-size: 3rem; /* Increased text size */
-    margin-bottom: 1rem;
-}
-
-.hero-text p {
-    font-size: 1.5rem; /* Increased text size */
-}
-
-.hero-image {
-    flex: 1;
-    padding: 1rem;
-}
-
-.hero img {
-    width: 100%; /* Full width */
-    height: auto;
-    max-width: 600px; /* Set maximum width */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    object-fit: cover;
-}
-
-/* Company Motivation Section */
-.company-motivation {
-    padding: 2rem 0;
-    background: #f9f9f9;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     text-align: center;
-    border-radius: 10px;
-    margin: 2rem auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    animation: slideInRight 1s ease-in-out;
-    max-width: 100%;
+    color: white;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
 }
 
-.company-motivation h2 {
+.hero-content {
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
     margin-bottom: 1rem;
-    color: #0056b3;
+    animation: fadeInDown 2s;
 }
 
-/* Additional Content Section */
-.additional-content {
-    padding: 2rem 0;
-    background: #f0f0f0;
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 2s;
+}
+
+.cta-button {
+    padding: 0.75rem 2rem;
+    background: #ff9800;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #e68900;
+}
+
+/* Section Styles */
+section {
+    padding: 3rem 1rem;
     text-align: center;
-    border-radius: 10px;
-    margin: 2rem auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    margin-bottom: 2rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
-.additional-content h2 {
-    margin-bottom: 1rem;
-    color: #0056b3;
+h2 {
+    font-size: 2.5rem;
+    color: #004080;
+    margin-bottom: 1.5rem;
 }
 
-/* About Us Section */
-#about .team {
+p {
+    font-size: 1.2rem;
+    color: #4d4545;
+    margin-bottom: 1.5rem;
+}
+
+/* Services Preview Section */
+.services-preview .service-cards {
     display: flex;
-    gap: 2rem;
     justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-#about .team-member {
-    background: #f9f9f9;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 300px;
-}
-
-#about .team-member:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-#about .team-member img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-}
-
-/* Services Section */
-.services {
-    display: flex;
-    gap: 2rem;
-    justify-content: space-between;
+    margin-top: 2rem;
     flex-wrap: wrap;
 }
 
 .service-card {
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 1rem 0;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
+    border-radius: 5px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeInUp 1s ease-in-out;
-    max-width: 300px;
+    width: 30%;
+    margin: 1rem 0;
+    transition: transform 0.3s;
 }
 
 .service-card img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #666;
 }
 
 .service-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
 }
 
-/* Contact Us Section */
-#contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+/* Why Choose Us Section */
+.why-choose-us ul {
+    list-style: none;
+    padding: 0;
     max-width: 600px;
-    margin: 2rem auto;
+    margin: auto;
+    text-align: left;
 }
 
-#contact label {
-    font-weight: bold;
+.why-choose-us ul li {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
 }
 
-#contact input,
-#contact textarea {
-    padding: 0.7rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 100%;
-    box-sizing: border-box;
+.why-choose-us ul li:before {
+    content: "✔";
+    color: #004080;
+    position: absolute;
+    left: 0;
 }
 
-#contact button {
-    padding: 0.7rem;
-    border: none;
-    border-radius: 5px;
-    background: #0056b3;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-#contact button:hover {
-    background: #003d7a;
-}
-
-address {
-    text-align: center;
-    margin-top: 2rem;
-}
-
-/* Footer */
-footer {
-    background: #004080;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-}
-
-footer .container {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-/* Keyframes */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideInRight {
-    from { transform: translateX(100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
-
-@media (max-width: 1024px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-image img {
-        max-width: 100%;
-    }
-
-    .services, .team {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card, .team-member {
-        max-width: 90%;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background: #004080;
-        width: 100%;
-        padding: 1rem 0;
-        text-align: center;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .search-form {
-        margin-left: 0;
-    }
-}
-
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    #logo {
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+    header .search-form {
+        margin-right: 1rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    .service-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
     header {
         flex-direction: column;
     }
-
-    .hero-text h2 {
+    header .search-form {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .hero h1 {
         font-size: 2rem;
     }
-
-    .hero-text p {
-        font-size: 1.2rem;
+    .hero p {
+        font-size: 1rem;
     }
-
-    .container {
-        width: 90%;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background: #004080;
+    .service-card {
         width: 100%;
-        padding: 1rem 0;
-        text-align: center;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .search-form {
-        margin-left: 0;
-    }
-
-    .company-motivation,
-    .additional-content {
-        margin: 1rem 0;
-    }
-
-    .service-card, .team-member {
-        max-width: 100%;
     }
 }

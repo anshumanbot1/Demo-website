@@ -33,7 +33,7 @@ header {
     margin-left: 2rem;
 }
 
-#hero-text {
+#card-text {
     font-size: 1.2rem;
     color: #ffffff;
     margin-bottom: 1.5rem;
@@ -75,9 +75,9 @@ header .search-form button {
     cursor: pointer;
 }
 
-/* Hero Section */
-.hero {
-    background: url('images/hero-bg.jpg') center/cover no-repeat;
+/* card Section */
+.card {
+    background: url('images/card-bg.jpg') center/cover no-repeat;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -88,18 +88,18 @@ header .search-form button {
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
 }
 
-.hero-content {
+.card-content {
     max-width: 800px;
     padding: 0 1rem;
 }
 
-.hero h1 {
+.card h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     animation: fadeInDown 2s;
 }
 
-.hero p {
+.card p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     animation: fadeInUp 2s;
@@ -220,10 +220,10 @@ p {
     header .search-form {
         margin-right: 1rem;
     }
-    .hero h1 {
+    .card h1 {
         font-size: 2.5rem;
     }
-    .hero p {
+    .card p {
         font-size: 1.2rem;
     }
     .service-card {
@@ -239,10 +239,10 @@ p {
         width: 100%;
         margin-top: 1rem;
     }
-    .hero h1 {
+    .card h1 {
         font-size: 2rem;
     }
-    .hero p {
+    .card p {
         font-size: 1rem;
     }
     .service-card {
